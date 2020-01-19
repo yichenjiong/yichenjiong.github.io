@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>机器学习day1 | MUXIXI的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="机器学习定义分类监督学习，非监督学习  监督学习回归问题，预测一个连续值的输出，例如房价预测回归：预测这类连续值属性的种类 分类问题：预测一个离散值输出，例如肿瘤种类预测练习题是回归问题和分类问题的判断  无监督学习在监督学习的肿瘤良性恶性的例子中，是已知肿瘤的类型是有恶性和良性这两类的，分类问题就是判断肿瘤是这两类中的哪一类 而非监督学习中，数据的种类是未知的 聚类算法：对于给定的数据集，判断该">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机器学习day1">
+<meta property="og:url" content="muxixi.ink/2020/01/16/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/index.html">
+<meta property="og:site_name" content="MUXIXI的博客">
+<meta property="og:description" content="机器学习定义分类监督学习，非监督学习  监督学习回归问题，预测一个连续值的输出，例如房价预测回归：预测这类连续值属性的种类 分类问题：预测一个离散值输出，例如肿瘤种类预测练习题是回归问题和分类问题的判断  无监督学习在监督学习的肿瘤良性恶性的例子中，是已知肿瘤的类型是有恶性和良性这两类的，分类问题就是判断肿瘤是这两类中的哪一类 而非监督学习中，数据的种类是未知的 聚类算法：对于给定的数据集，判断该">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-01-15T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-01-16T03:58:58.591Z">
+<meta property="article:author" content="囧一尘同学">
+<meta property="article:tag" content="学习记录">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="MUXIXI的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">MUXIXI的博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">记录</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="muxixi.ink"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-傅里叶变换" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/16/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" class="article-date">
+  <time datetime="2020-01-15T16:00:00.000Z" itemprop="datePublished">2020-01-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      机器学习day1
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="机器学习定义"><a href="#机器学习定义" class="headerlink" title="机器学习定义"></a>机器学习定义</h3><h6 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h6><p>监督学习，非监督学习</p>
+<hr>
+<h4 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a>监督学习</h4><h5 id="回归问题，预测一个连续值的输出，例如房价预测"><a href="#回归问题，预测一个连续值的输出，例如房价预测" class="headerlink" title="回归问题，预测一个连续值的输出，例如房价预测"></a>回归问题，预测一个连续值的输出，例如房价预测</h5><p>回归：预测这类连续值属性的种类</p>
+<h5 id="分类问题：预测一个离散值输出，例如肿瘤种类预测"><a href="#分类问题：预测一个离散值输出，例如肿瘤种类预测" class="headerlink" title="分类问题：预测一个离散值输出，例如肿瘤种类预测"></a>分类问题：预测一个离散值输出，例如肿瘤种类预测</h5><p>练习题是回归问题和分类问题的判断</p>
+<hr>
+<h4 id="无监督学习"><a href="#无监督学习" class="headerlink" title="无监督学习"></a>无监督学习</h4><p>在监督学习的肿瘤良性恶性的例子中，是已知肿瘤的类型是有恶性和良性这两类的，分类问题就是判断肿瘤是这两类中的哪一类</p>
+<p>而非监督学习中，数据的种类是未知的</p>
+<h5 id="聚类算法：对于给定的数据集，判断该数据集包含几个聚类"><a href="#聚类算法：对于给定的数据集，判断该数据集包含几个聚类" class="headerlink" title="聚类算法：对于给定的数据集，判断该数据集包含几个聚类"></a>聚类算法：对于给定的数据集，判断该数据集包含几个聚类</h5><h5 id="鸡尾酒会算法"><a href="#鸡尾酒会算法" class="headerlink" title="鸡尾酒会算法"></a>鸡尾酒会算法</h5><p>分离两个人声，分离人声和背景音乐</p>
+<p>[W,s,v]=svd(repmat(sumx.<em>x,1),size(x,1),1).</em>x)*x’)</p>
+<p>使用的编译环境Octave，MATLAB</p>
+<hr>
+<hr>
+<h3 id="章二-单线性回归问题"><a href="#章二-单线性回归问题" class="headerlink" title="章二 单线性回归问题"></a>章二 单线性回归问题</h3><h4 id="2-1-单变量线性回归模型表示"><a href="#2-1-单变量线性回归模型表示" class="headerlink" title="2.1 单变量线性回归模型表示"></a>2.1 单变量线性回归模型表示</h4><p><strong>一些符号定义</strong>：</p>
+<p>m：训练样本数目</p>
+<p>x：输入变量或者说输入特征</p>
+<p>y：表述输出变量或者目标变量，即预测结果</p>
+<p>（x，y）表示一个训练样本</p>
+<p>用（x<sup>i</sup> ，y<sup>i</sup> )来表示第i个训练样本</p>
+<p><strong>监督学习的过程是</strong>：</p>
+<p>将一个训练集喂给算法，算法生成一个函数h，这个h的输入是输入变量x，输出是输出变量y，即h是一个x到y的映射</p>
+<p>函数h表示为：</p>
+<p>h<sub>θ</sub> (x)=θ<sub>0</sub> +θ<sub>1</sub> x</p>
+<p>有时h<sub>θ</sub> (x)也简写成h（x）</p>
+<p>这是一个线型函数，称为单变量线型回归模型</p>
+<hr>
+<h4 id="2-2代价函数"><a href="#2-2代价函数" class="headerlink" title="2.2代价函数"></a>2.2代价函数</h4><p>在模型h<sub>θ</sub> (x)=θ<sub>0</sub> +θ<sub>1</sub> x中</p>
+<p>θ<sub>0</sub> 和θ<sub>1</sub>被称为模型参数</p>
+<p>模型的建立就是讨论如何确定这两个参数使模型线尽量好的拟合训练集数据。</p>
+<p>那么这个问题就使一个最小化问题，如下</p>
+<p>$$<br>minimize_{θ<em>0θ_1}<br>1/2m\sum</em>{i=1 }^{m}(h_θ(x^i) -y^i)^2<br>$$<br> 其中m为样本个数</p>
+<p> 代价函数记为<br>$$<br>J(θ<em>0,θ_1) = 1/2m\sum</em>{i=1 }^{m}(h_θ(x^i) -y^i)^2<br>$$</p>
+<hr>
+<h4 id="2-3代价函数理解1，"><a href="#2-3代价函数理解1，" class="headerlink" title="2.3代价函数理解1，"></a>2.3代价函数理解1，</h4><p>当 θ<sub>0</sub> = 0时代价函数的图像，类似二次函数</p>
+<hr>
+<h4 id="2-4代价函数理解2"><a href="#2-4代价函数理解2" class="headerlink" title="2.4代价函数理解2"></a>2.4代价函数理解2</h4><p>当 θ<sub>0</sub> 不为 0时代价函数的图像时一个三维弓形面</p>
+<p>用轮廓图（等值线）来描述代价函数</p>
+<p>问题就是怎样找出使J最小的θ<sub>0</sub>和θ<sub>1</sub></p>
+<p>2020/116</p>
+<hr>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="muxixi.ink/2020/01/16/%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2/" data-id="ck5kvlvxh000cjwv401h1fiew" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" rel="tag">学习记录</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/01/17/PYTHON%E8%AE%B0%E5%BD%95/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          python学习笔记
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/01/16/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">定义及单线性回归问题</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/PYTHON/">PYTHON</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AE%9E%E4%B9%A0/">实习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9B%B9%E7%8B%97/">曹狗</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">机器学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%AF%95%E8%AE%BE/">毕设</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" rel="tag">学习记录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%84%9F%E6%82%9F/" rel="tag">感悟</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%AF%95%E8%AE%BE%E5%AD%A6%E4%B9%A0%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/" rel="tag">毕设学习持续更新</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" style="font-size: 20px;">学习记录</a> <a href="/tags/%E6%84%9F%E6%82%9F/" style="font-size: 10px;">感悟</a> <a href="/tags/%E6%AF%95%E8%AE%BE%E5%AD%A6%E4%B9%A0%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/" style="font-size: 10px;">毕设学习持续更新</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">一月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/01/19/%E6%AF%95%E8%AE%BE/">毕设学习计数</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/19/%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E4%B9%A6%E5%86%99%E6%B5%8B%E8%AF%95/">数学公式书写测试</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/19/%E6%83%B3%E6%83%B3/">想想</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/19/nihao/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/18/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 囧一尘同学<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
