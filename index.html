@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -50,19 +50,19 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=5.1.3">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=5.1.3">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=5.1.3">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
 
 
 
@@ -92,8 +92,8 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
-    version: '5.1.4',
+    scheme: 'Mist',
+    version: '5.1.3',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
@@ -182,6 +182,26 @@
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
             首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
           </a>
         </li>
       
@@ -1141,46 +1161,306 @@
       
         
           
-            <p>####001<br>#####关于print</p>
-<ul>
+            <h2 id="001"><a href="#001" class="headerlink" title="001"></a>001</h2><h5 id="关于print"><a href="#关于print" class="headerlink" title="关于print"></a>关于print</h5><ul>
 <li>可以输出运算后的数字</li>
 <li>可以输出拼接及重复的字符串</li>
 <li>输出拼接+不可以拼接不同类型</li>
 </ul>
 <hr>
-<p>####002<br><strong>注意缩进</strong></p>
+<h2 id="002"><a href="#002" class="headerlink" title="002"></a>002</h2><p><strong>注意缩进</strong></p>
 <p>BIF:built - in function内置函数</p>
-<p>#####BIF函数信息的获取<br>dir(_builtins)获取内置函数列表</p>
+<h5 id="BIF函数信息的获取"><a href="#BIF函数信息的获取" class="headerlink" title="BIF函数信息的获取"></a>BIF函数信息的获取</h5><p>dir(_builtins)获取内置函数列表</p>
 <p>help（内置函数名）获取内置函数用法帮助</p>
 <hr>
 <hr>
-<p>###003变量与字符串</p>
-<p>####变量</p>
-<ul>
+<h2 id="003变量与字符串"><a href="#003变量与字符串" class="headerlink" title="003变量与字符串"></a>003变量与字符串</h2><h4 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h4><ul>
 <li><strong>变量需要赋值才能使用</strong></li>
 <li>变量名不可用数字开头，和c差不多</li>
 <li><strong>区分大小写</strong></li>
 <li>=是赋值符号</li>
-<li>变量名尽量有意义<br>####字符串</li>
-<li>是为引号内的内容</li>
+<li>变量名尽量有意义<h4 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h4></li>
+<li>概念：是为引号内的内容</li>
 <li>+对字符串的作用是拼接</li>
 <li>引号可以是‘’也可以是“”但一定要成对</li>
-<li>字符串内的引号打印可以利用转义字符\也可单双引号交替使用<br>#####原始字符串</li>
+<li>字符串内的引号打印可以利用转义字符\也可单双引号交替使用<h5 id="原始字符串"><a href="#原始字符串" class="headerlink" title="原始字符串"></a>原始字符串</h5></li>
 <li>使用方法是在字符串引号前面加一个r如r‘C:\now’打印出来的字符是不会进行转义的</li>
 <li>转义字符串末尾不能直接加反斜杠\</li>
 </ul>
 <hr>
 <hr>
-<p>###004条件分支</p>
-<p>####if else 语句<br><strong>格式</strong>：</p>
+<h2 id="004条件分支"><a href="#004条件分支" class="headerlink" title="004条件分支"></a>004条件分支</h2><h4 id="if-else-语句"><a href="#if-else-语句" class="headerlink" title="if else 语句"></a>if else 语句</h4><p><strong>格式</strong>：</p>
 <pre><code>if 条件 ：
     条件为真（True）执行的操作
 else：
-    条件为假执行的操作</code></pre><p>####while循环<br><strong>格式</strong>：</p>
+    条件为假执行的操作</code></pre><h4 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h4><p><strong>格式</strong>：</p>
 <pre><code>while 条件 ：
-       条件为真执行的操作</code></pre><p>####逻辑操作符and<br>and可以将任意表达式连接到一起并返回一个布尔类型的值<br>####随机数生成:random模块<br>在使用模块之前必须导入模块<br>如导入random模块语句如下</p>
-<pre><code>import random</code></pre><p>#####randint()函数<br>会返回一个随机的整数</p>
+       条件为真执行的操作</code></pre><h4 id="逻辑操作符and"><a href="#逻辑操作符and" class="headerlink" title="逻辑操作符and"></a>逻辑操作符and</h4><p>and可以将任意表达式连接到一起并返回一个布尔类型的值</p>
+<h4 id="随机数生成-random模块"><a href="#随机数生成-random模块" class="headerlink" title="随机数生成:random模块"></a>随机数生成:random模块</h4><p>在使用模块之前必须导入模块<br>如导入random模块语句如下</p>
+<pre><code>import random</code></pre><h5 id="randint-函数"><a href="#randint-函数" class="headerlink" title="randint()函数"></a>randint()函数</h5><p>会返回一个随机的整数</p>
 <p>2020/1/17</p>
+<hr>
+<hr>
+<p>2020/1/20</p>
+<hr>
+<h2 id="005-python的数据类型"><a href="#005-python的数据类型" class="headerlink" title="005 python的数据类型"></a>005 python的数据类型</h2><h5 id="数值类型"><a href="#数值类型" class="headerlink" title="数值类型"></a>数值类型</h5><ul>
+<li>整型：即整数<ul>
+<li>长整型</li>
+<li>整型 python3中这俩合并了</li>
+</ul>
+</li>
+<li>浮点型：带小数点则为浮点型，没有则为整型</li>
+<li>e记法，即科学计数法，这个e不区分大小写<ul>
+<li>e记法会自动变成浮点型</li>
+<li>15e10代表15*10的10次方</li>
+</ul>
+</li>
+<li>布尔类型<ul>
+<li>是为特殊的整数类型</li>
+<li>有true和fale两种类型，默认为1和零</li>
+<li>所以可以用于计算</li>
+<li>不过最好不要用于计算</li>
+</ul>
+</li>
+<li>转化函数<ul>
+<li>int（）将数据类型转化为整型<ul>
+<li>括号中的必须为数字型的字符串，或者浮点数</li>
+<li>对浮点数的操作是直接取整</li>
+</ul>
+</li>
+<li>float（）<ul>
+<li>将整数或数值型字符串转换为浮点数</li>
+</ul>
+</li>
+<li>str（）<ul>
+<li>是将一个数或任何其他类型转换为一个字符串</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>python的BIF名可以当作变量名来使用，但被当作变量名使用的BIF会失去其原函数功能</li>
+</ul>
+<h5 id="获取关于类型的信息"><a href="#获取关于类型的信息" class="headerlink" title="获取关于类型的信息"></a>获取关于类型的信息</h5><ul>
+<li>type（）函数，可返回数据类型</li>
+<li>isinstance（a,b）a为待确定类型的数据，b是指定的数据类型<br>该函数返回一个布尔类型的值，当a为指定数据类型时返回true，否则返回false</li>
+</ul>
+<hr>
+<h2 id="006常用操作符"><a href="#006常用操作符" class="headerlink" title="006常用操作符"></a>006常用操作符</h2><h5 id="加减乘除"><a href="#加减乘除" class="headerlink" title="加减乘除 +-/*"></a>加减乘除 +-/*</h5><ul>
+<li><p>+=之类的类似c语言中的用法在python中也可以用</p>
+</li>
+<li><p>赋值符连着使用也是可以的，例如a = b = c = d = 10相当于给abcd都赋值10</p>
+</li>
+<li><p>除法是真正的除法，不是整数则转换为浮点数</p>
+</li>
+<li><p>求余% </p>
+</li>
+<li><p>幂运算操作符**例如3**5的意思是3<sup>5</sup></p>
+</li>
+<li><p>地板除法 //<br>除法结果是小数的话舍弃小数，整数取法是去相邻整数中较小的整数，例如10//8为1，-8//3 = -3</p>
+</li>
+<li><p>基本就是先乘除后加减，括号内先算</p>
+</li>
+<li><p>关于幂运算操作符的优先级<br>幂运算操作符的优先级：对于一元操作符，比其左侧运算的优先级高，比右侧的优先级高</p>
+</li>
+</ul>
+<h5 id="逻辑操作符-and-or-not"><a href="#逻辑操作符-and-or-not" class="headerlink" title="逻辑操作符 and or not"></a>逻辑操作符 and or not</h5><p>都是一元操作符，功能略<br>连续的比较操作符如3&lt;4&lt;5解释为<br>3&lt;4and4&lt;5</p>
+<h5 id="优先级"><a href="#优先级" class="headerlink" title="优先级"></a>优先级</h5><p>用括号，略</p>
+<hr>
+<h2 id="007-8-9分支和循环"><a href="#007-8-9分支和循环" class="headerlink" title="007 8 9分支和循环"></a>007 8 9分支和循环</h2><h5 id="if-else"><a href="#if-else" class="headerlink" title="if else"></a>if else</h5><p>c语言中if-else-if-else结构在python中也有</p>
+<p>形式是：</p>
+<pre><code>if 条件：
+    执行段
+elif 条件：
+    执行段
+else：
+    执行段</code></pre><h5 id="三元操作符"><a href="#三元操作符" class="headerlink" title="三元操作符"></a>三元操作符</h5><p>例如：<br>small = x if x&lt;y else y</p>
+<p>这行代码，当x&lt;y时将x赋值给small否则将y赋值给small</p>
+<h5 id="断言-assert"><a href="#断言-assert" class="headerlink" title="断言 assert"></a>断言 assert</h5><p>应用形式：例如 assert 3&gt;4</p>
+<p>作用：当关键字assert后面的条件为假得到时候，程序自动崩溃并抛出AssertionError异常，一般用于在程序中插入检查点，用在需要确保程序中某个条件一定为真才能让程序执行下去的情况</p>
+<h5 id="while循环-1"><a href="#while循环-1" class="headerlink" title="while循环"></a>while循环</h5><p>形式之前有，略</p>
+<h5 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h5><ul>
+<li><p>形式：</p>
+<p>  for 目标 in 表达式:</p>
+<pre><code>循环体</code></pre><p>  注：目标是一个变量，而表达式是一个列表或元组或字符串<br>  列表或元组后面章节</p>
+</li>
+<li><p>range()函数</p>
+<ul>
+<li>形式：<br>  range([start,] stop[,step=1])</li>
+<li>作用是生成一个从start参数的值开始发哦stop参数值结束的<strong>数字序列</strong>，srart参数默认为0 方括号中的为可选参数</li>
+<li>例子：range（0,5）生成1 2 3 4 5<br>  range（5）同作用<br>  range(1,10,2)生成1，3，5，7，9</li>
+</ul>
+</li>
+<li><p>break 和 contiune<br>和c中一样，略 </p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="muxixi.ink/2020/01/16/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="囧一尘同学">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MUXIXI的博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/01/16/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url">定义及单线性回归问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-16T00:00:00+08:00">
+                2020-01-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>###章一机器学习定义<br>####监督学习<br>回归问题，预测一个连续值的输出，例如房价预测<br>回归：预测这类连续值属性的种类<br>分类问题：预测一个离散值输出，例如肿瘤种类预测<br>练习题是回归问题和分类问题的判断</p>
+<hr>
+<p>无监督学习<br>在监督学习的肿瘤良性恶性的例子中，是已知肿瘤的类型是有恶性和良性这两类的，分类问题就是判断肿瘤是这两类中的哪一类<br>而非监督学习中，数据的种类是未知的<br>聚类算法：对于给定的数据集，判断该数据集包含几个聚类<br>鸡尾酒会算法<br>分离两个人声，分离人声和背景音乐<br>[W,s,v]=svd(repmat(sumx.x,1),size(x,1),1).x)*x’)<br>使用的编译环境Octave，MATLAB</p>
+<hr>
+<hr>
+<p>###章二 单线性回归问题<br>####2.1 单变量线性回归模型表示<br><strong>一些符号定义：</strong><br>m：训练样本数目<br>x：输入变量或者说输入特征<br>y：表述输出变量或者目标变量，即预测结果<br>（x，y）表示一个训练样本<br>用（xi ，yi )来表示第i个训练样本<br>监督学习的过程是：<br>将一个训练集喂给算法，算法生成一个函数h，这个h的输入是输入变量x，输出是输出变量y，即h是一个x到y的映射<br>函数h表示为：<br>hθ (x)=θ0 +θ1 x<br>有时hθ (x)也简写成h（x）<br>这是一个线型函数，称为单变量线型回归模型</p>
+<hr>
+<p>####2.2代价函数<br>在模型hθ (x)=θ0 +θ1 x中<br>θ0 和θ1被称为模型参数<br>模型的建立就是讨论如何确定这两个参数使模型线尽量好的拟合训练集数据。<br>那么这个问题就使一个最小化问题，如下<br>$$<br>minimize_{θ0θ_1}<br>1/2m\sum{i=1 }^{m}(h_θ(x^i) -y^i)^2<br>$$<br>其中m为样本个数<br>代价函数记为<br>$$<br>J(θ_0,θ_1) = 1/2m\sum{i=1 }^{m}(h_θ(x^i) -y^i)^2<br>$$</p>
+<p>####2.3代价函数理解1，<br>当 θ0 = 0时代价函数的图像，类似二次函数</p>
+<hr>
+<p>####2.4代价函数理解2<br>当 θ0 不为 0时代价函数的图像时一个三维弓形面<br>用轮廓图（等值线）来描述代价函数<br>问题就是怎样找出使J最小的θ0和θ1<br>2020/1/16<br>以上记录source文件丢失</p>
+<hr>
+<hr>
+<p>2020/1/17<br>####2.5梯度下降梗概</p>
+<p>梯度下降法所做的是<br>给代价函数J(θ0，θ1)中的θ0，θ1一个初始值，通常是0，然后持续改变这俩值，直到找到J的最小值或者局部极小值</p>
+<p>梯度下降法初始值不同可能会得到不同的局部极小值<br>公式如图：<br><a href="E:\myblog\source_posts\梯度下降公式.JPG">梯度下降公式</a><br>符号注释：<br>：= 表示赋值运算符<br>α 表示学习速率，下山步幅<br><strong>注意：在计算完所有的新的θ值后同时更新，而不是计算完一个就更新</strong></p>
+<hr>
+<p>####2.6梯度下降的直观理解<br>梯度下降公式：</p>
+<p>#####导数项的意义<br>控制下降方向以及下降幅度</p>
+<p>#####学习速率α项的意义<br>控制下降步幅</p>
+<p>#####若起始点就在最低点会发生什么<br>导数项为0，θ收敛，不再改变</p>
+<p>#####是否有必要防止过程中改变α以防止不收敛<br>没有必要，因为越接近局部最小值导数项越小，步幅越小。</p>
+<hr>
+<p>####2.7 梯度下降的线性回归</p>
+<p>线性回归问题是通过对一堆数据的学习来拟合出一个假设函数的最优参数</p>
+<p>这个参数是否合适的评价标准是代价函数</p>
+<p>那么就是要找到使这个代价函数最小的函数的参数</p>
+<p>梯度下降法就是如何寻找这些最优函数参数的方法<br>具体分析如下：</p>
 <hr>
 <hr>
 
@@ -1362,177 +1642,6 @@ else：
 <p>用轮廓图（等值线）来描述代价函数</p>
 <p>问题就是怎样找出使J最小的θ<sub>0</sub>和θ<sub>1</sub></p>
 <p>2020/116</p>
-<hr>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="muxixi.ink/2020/01/16/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="囧一尘同学">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="MUXIXI的博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/16/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url">定义及单线性回归问题</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-01-16T00:00:00+08:00">
-                2020-01-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
-                    <span itemprop="name">机器学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>###章一机器学习定义<br>####监督学习<br>回归问题，预测一个连续值的输出，例如房价预测<br>回归：预测这类连续值属性的种类<br>分类问题：预测一个离散值输出，例如肿瘤种类预测<br>练习题是回归问题和分类问题的判断</p>
-<hr>
-<p>无监督学习<br>在监督学习的肿瘤良性恶性的例子中，是已知肿瘤的类型是有恶性和良性这两类的，分类问题就是判断肿瘤是这两类中的哪一类<br>而非监督学习中，数据的种类是未知的<br>聚类算法：对于给定的数据集，判断该数据集包含几个聚类<br>鸡尾酒会算法<br>分离两个人声，分离人声和背景音乐<br>[W,s,v]=svd(repmat(sumx.x,1),size(x,1),1).x)*x’)<br>使用的编译环境Octave，MATLAB</p>
-<hr>
-<hr>
-<p>###章二 单线性回归问题<br>####2.1 单变量线性回归模型表示<br><strong>一些符号定义：</strong><br>m：训练样本数目<br>x：输入变量或者说输入特征<br>y：表述输出变量或者目标变量，即预测结果<br>（x，y）表示一个训练样本<br>用（xi ，yi )来表示第i个训练样本<br>监督学习的过程是：<br>将一个训练集喂给算法，算法生成一个函数h，这个h的输入是输入变量x，输出是输出变量y，即h是一个x到y的映射<br>函数h表示为：<br>hθ (x)=θ0 +θ1 x<br>有时hθ (x)也简写成h（x）<br>这是一个线型函数，称为单变量线型回归模型</p>
-<hr>
-<p>####2.2代价函数<br>在模型hθ (x)=θ0 +θ1 x中<br>θ0 和θ1被称为模型参数<br>模型的建立就是讨论如何确定这两个参数使模型线尽量好的拟合训练集数据。<br>那么这个问题就使一个最小化问题，如下<br>$$<br>minimize_{θ0θ_1}<br>1/2m\sum{i=1 }^{m}(h_θ(x^i) -y^i)^2<br>$$<br>其中m为样本个数<br>代价函数记为<br>$$<br>J(θ_0,θ_1) = 1/2m\sum{i=1 }^{m}(h_θ(x^i) -y^i)^2<br>$$</p>
-<p>####2.3代价函数理解1，<br>当 θ0 = 0时代价函数的图像，类似二次函数</p>
-<hr>
-<p>####2.4代价函数理解2<br>当 θ0 不为 0时代价函数的图像时一个三维弓形面<br>用轮廓图（等值线）来描述代价函数<br>问题就是怎样找出使J最小的θ0和θ1<br>2020/1/16<br>以上记录source文件丢失</p>
-<hr>
-<hr>
-<p>2020/1/17<br>####2.5梯度下降梗概</p>
-<p>梯度下降法所做的是<br>给代价函数J(θ0，θ1)中的θ0，θ1一个初始值，通常是0，然后持续改变这俩值，直到找到J的最小值或者局部极小值</p>
-<p>梯度下降法初始值不同可能会得到不同的局部极小值<br>公式如图：<br><a href="E:\myblog\source_posts\梯度下降公式.JPG">梯度下降公式</a><br>符号注释：<br>：= 表示赋值运算符<br>α 表示学习速率，下山步幅<br><strong>注意：在计算完所有的新的θ值后同时更新，而不是计算完一个就更新</strong></p>
-<hr>
-<p>####2.6梯度下降的直观理解<br>梯度下降公式：</p>
-<p>#####导数项的意义<br>控制下降方向以及下降幅度</p>
-<p>#####学习速率α项的意义<br>控制下降步幅</p>
-<p>#####若起始点就在最低点会发生什么<br>导数项为0，θ收敛，不再改变</p>
-<p>#####是否有必要防止过程中改变α以防止不收敛<br>没有必要，因为越接近局部最小值导数项越小，步幅越小。</p>
-<hr>
-<p>####2.7 梯度下降的线性回归</p>
-<p>线性回归问题是通过对一堆数据的学习来拟合出一个假设函数的最优参数</p>
-<p>这个参数是否合适的评价标准是代价函数</p>
-<p>那么就是要找到使这个代价函数最小的函数的参数</p>
-<p>梯度下降法就是如何寻找这些最优函数参数的方法<br>具体分析如下：</p>
-<hr>
 <hr>
 
           
@@ -1779,10 +1888,10 @@ else：
               
               
               <div class="site-state-item site-state-categories">
-                
+                <a href="/categories/index.html">
                   <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
-                
+                </a>
               </div>
             
 
@@ -1790,10 +1899,10 @@ else：
               
               
               <div class="site-state-item site-state-tags">
-                
+                <a href="/tags/index.html">
                   <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
@@ -1801,7 +1910,9 @@ else：
 
           
 
-          
+          <div class="links-of-author motion-element">
+            
+          </div>
 
           
           
@@ -1846,7 +1957,7 @@ else：
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.3</div>
 
 
 
@@ -1868,8 +1979,6 @@ else：
         <i class="fa fa-arrow-up"></i>
         
       </div>
-    
-
     
 
   </div>
@@ -1904,61 +2013,42 @@ else：
 
 
   
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
 
 
 
   
   
 
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
-
   
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
 
 
 
@@ -1991,10 +2081,6 @@ else：
 
 
 
-
-
-
-
   
 
 
@@ -2005,9 +2091,6 @@ else：
 
   
 
-  
-
-  
   
 
   
