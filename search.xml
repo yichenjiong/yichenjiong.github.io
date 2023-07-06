@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>测试用文章</title>
-    <url>/2023/07/04/%E6%B5%8B%E8%AF%95%E7%94%A8%E6%96%87%E7%AB%A0/</url>
-    <content><![CDATA[<h1 id="blog-page-for-test"><a href="#blog-page-for-test" class="headerlink" title="blog page for test"></a>blog page for test</h1><p>很久没写博客，但是私以为博客还是很有用的，用来记录、复习一些学过的东西，用来分享一些技术，用来激励自己。都是正向的功能。所以决定重新开始写，但是hexo 和 next 这些东西，因为许久不用，都已经丢掉了。所以这一页是用来进行测试的。所以这里的东西就我自己看就可以了。</p>
-]]></content>
-      <categories>
-        <category>测试</category>
-      </categories>
-      <tags>
-        <tag>测试用文章</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>建站记录</title>
     <url>/2023/07/05/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<h1 id="本站的建站记录"><a href="#本站的建站记录" class="headerlink" title="本站的建站记录"></a>本站的建站记录</h1><h2 id="需要做的事情"><a href="#需要做的事情" class="headerlink" title="需要做的事情"></a>需要做的事情</h2><ul>
@@ -48,6 +36,18 @@
       </categories>
       <tags>
         <tag>建站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试用文章</title>
+    <url>/2023/07/04/%E6%B5%8B%E8%AF%95%E7%94%A8%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h1 id="blog-page-for-test"><a href="#blog-page-for-test" class="headerlink" title="blog page for test"></a>blog page for test</h1><p>很久没写博客，但是私以为博客还是很有用的，用来记录、复习一些学过的东西，用来分享一些技术，用来激励自己。都是正向的功能。所以决定重新开始写，但是hexo 和 next 这些东西，因为许久不用，都已经丢掉了。所以这一页是用来进行测试的。所以这里的东西就我自己看就可以了。</p>
+]]></content>
+      <categories>
+        <category>测试</category>
+      </categories>
+      <tags>
+        <tag>测试用文章</tag>
       </tags>
   </entry>
 </search>
