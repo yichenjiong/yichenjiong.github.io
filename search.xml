@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>测试用文章</title>
+    <url>/2023/07/04/%E6%B5%8B%E8%AF%95%E7%94%A8%E6%96%87%E7%AB%A0/</url>
+    <content><![CDATA[<h1 id="blog-page-for-test"><a href="#blog-page-for-test" class="headerlink" title="blog page for test"></a>blog page for test</h1><p>很久没写博客，但是私以为博客还是很有用的，用来记录、复习一些学过的东西，用来分享一些技术，用来激励自己。都是正向的功能。所以决定重新开始写，但是hexo 和 next 这些东西，因为许久不用，都已经丢掉了。所以这一页是用来进行测试的。所以这里的东西就我自己看就可以了。</p>
+]]></content>
+      <categories>
+        <category>测试</category>
+      </categories>
+      <tags>
+        <tag>测试用文章</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>建站记录</title>
+    <url>/2023/07/05/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h1 id="本站的建站记录"><a href="#本站的建站记录" class="headerlink" title="本站的建站记录"></a>本站的建站记录</h1><h2 id="需要做的事情"><a href="#需要做的事情" class="headerlink" title="需要做的事情"></a>需要做的事情</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> 根据hexo官网配置hexo工作环境</li>
+<li><input disabled="" type="checkbox"> 配置hexo的github托管仓库和token</li>
+<li><input disabled="" type="checkbox"> 设置图床和图床管理软件picGo</li>
+<li><input disabled="" type="checkbox"> 学习记录基本的hexo使用命令</li>
+<li><input disabled="" type="checkbox"> 下载next主题</li>
+<li><input disabled="" type="checkbox"> 配置hexo</li>
+<li><input disabled="" type="checkbox"> 配置next主题</li>
+<li><input disabled="" type="checkbox"> 编写博客</li>
+</ul>
+<h2 id="配置hexo工作环境"><a href="#配置hexo工作环境" class="headerlink" title="配置hexo工作环境"></a>配置hexo工作环境</h2><p>首先按照 hexo 官网上给定的教程下载依赖的一系列东西，然后选择一个文件夹<br>在这个文件夹里 右键 git Bash here 如下图所示</p>
+<p><img src="https://cdn.staticaly.com/gh/yichenjiong/blog_images@main/images/gitbashhere.png" alt="get bash here"></p>
+<p>然后 在这个文件中安装管理hexo文件的工具，安装hexo 初始化hexo<br>命令如下：<br><code>npm install -g hexo-cli</code><br><code>npm install hexo</code><br><code>hexo init</code></p>
+<p>然后这个文件夹下边就会有hexo必要的文件<br>如下图所示 ：</p>
+<p><img src="https://cdn.staticaly.com/gh/yichenjiong/blog_images@main/images/hexofiles.png" alt="hexo 目录"></p>
+<ol>
+<li>根据 hexo 官网的步骤下载使用 hexo 需要的环境</li>
+</ol>
+<p>这里附上 hexo 官网的环境配置的页面链接如下<br><a href="https://hexo.io/zh-cn/docs/">hexo官网</a></p>
+<h2 id="基本的hexo使用命令"><a href="#基本的hexo使用命令" class="headerlink" title="基本的hexo使用命令"></a>基本的hexo使用命令</h2><ol>
+<li>hexo init</li>
+</ol>
+<p>初始化hexo 文件夹<br>2. hexo g</p>
+<p>生成hexo将要部署的文件<br>3. hexo clean</p>
+<p>删除第二步生成的文件<br>4. hexo s</p>
+<p>让第二步生成的页面在本地运行，可以用来预览<br>5. hexo d</p>
+<p>将第二步生成的静态网页部署到github仓库中<br>6. hexo n “要编写的md文件名”</p>
+]]></content>
+      <categories>
+        <category>记录类</category>
+      </categories>
+      <tags>
+        <tag>建站</tag>
+      </tags>
+  </entry>
+</search>
