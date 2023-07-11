@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title></title>
+    <url>/2023/07/11/mit%E7%94%B5%E8%B7%AF%E4%B8%8E%E7%94%B5%E5%AD%90/</url>
+    <content><![CDATA[<h1 id="基本电路分析法"><a href="#基本电路分析法" class="headerlink" title="#基本电路分析法"></a>#基本电路分析法</h1><h2 id="上一章回顾"><a href="#上一章回顾" class="headerlink" title="##上一章回顾"></a>##上一章回顾</h2><p>上一章的标题是<strong>集总电路抽象介绍</strong> 。集总电路的规定及使电路成为集总电路的条件为以下两个：</p>
+<p>1、</p>
+<p>$$<br>\frac{\partial Φ_B}{\partial t}&#x3D;0<br>$$</p>
+<p>意思是<strong>元件外部的磁通量变化率为0</strong></p>
+<p>其中磁通量$Φ_B$ 的定义为：</p>
+<p>设在磁感应强度为B的匀强磁场中，有一个面积为S且与磁场强度方向垂直的平面，则<strong>磁感应强度B与面积S的乘积，叫做穿过这个平面的磁通量，简称磁通，标量，符号为Φ</strong>。</p>
+<p>而因为Φ&#x3D;BS 所以磁感应强度$B&#x3D;\frac{Φ}{S}$ ,所以磁感应强度又称为磁通密度</p>
+<p>2、</p>
+<p>$$<br>\frac{\partial q}{\partial t }&#x3D;0<br>$$</p>
+<p>意思是<strong>元件内部的电荷变化率为0</strong></p>
+<p>以上就是集总电路的两个条件，只要在符合这两个条件的情况下就可以将电路中的元件抽象成电源电阻等集总电路元件。并且这样的电路也会遵循一些简化了的电路定律，比如kvl kcl等。</p>
+<h2 id="基尔霍夫电压定律和基尔霍夫电流定律"><a href="#基尔霍夫电压定律和基尔霍夫电流定律" class="headerlink" title="##基尔霍夫电压定律和基尔霍夫电流定律"></a>##基尔霍夫电压定律和基尔霍夫电流定律</h2><p>在遵循集总电路的条件的情况下，那么集总电路遵循基尔霍夫电压定律和基尔霍夫电流定律，简称KVL 和 KCL</p>
+<h3 id="KVL"><a href="#KVL" class="headerlink" title="###KVL"></a>###KVL</h3><p>$$<br>\displaystyle \sum^{}_{loop}{v_i}&#x3D;0<br>$$</p>
+<p>意思是一个回路中的电压总和为0</p>
+<h3 id="KCL"><a href="#KCL" class="headerlink" title="###KCL"></a>###KCL</h3><p>$$<br>\displaystyle \sum^{}_{node}{i_j}&#x3D;0<br>$$</p>
+<p>意思是，在电路中的一个node ，即一个节点上，流入该节点的电流的总和为0，节点就是元件和元件的连接点。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>建站记录</title>
     <url>/2023/07/05/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<h1 id="本站的建站记录"><a href="#本站的建站记录" class="headerlink" title="本站的建站记录"></a>本站的建站记录</h1><h2 id="需要做的事情"><a href="#需要做的事情" class="headerlink" title="需要做的事情"></a>需要做的事情</h2><ul>
