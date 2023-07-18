@@ -46,25 +46,41 @@ id="基尔霍夫电压定律和基尔霍夫电流定律">基尔霍夫电压定�
       </tags>
   </entry>
   <entry>
+    <title>solidworks学习随笔</title>
+    <url>/2023/07/18/solidworks%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94/</url>
+    <content><![CDATA[<p>买了3d打印机当然要进行建模，选择的建模软件是之前大学的时候用过的solidworks。学习教程是B站的阿奇的教程，这里不记录具体的知识点，只记录学习过程，进度，和作业成果。</p>
+<p>2023 07 18</p>
+<p>看完了草图部分</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>solidworks</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>建站记录</title>
     <url>/2023/07/05/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<h1 id="本站的建站记录">本站的建站记录</h1>
 <h2 id="需要做的事情">需要做的事情</h2>
 <ul class="task-list">
-<li><label><input type="checkbox"
-checked="" />根据hexo官网配置hexo工作环境</label></li>
-<li><label><input
-type="checkbox" />配置hexo的github托管仓库和token</label></li>
-<li><label><input
-type="checkbox" />设置图床和图床管理软件picGo</label></li>
-<li><label><input
-type="checkbox" />学习记录基本的hexo使用命令</label></li>
-<li><label><input type="checkbox" />下载next主题</label></li>
-<li><label><input type="checkbox" />配置hexo</label></li>
-<li><label><input type="checkbox" />配置next主题</label></li>
-<li><label><input type="checkbox" />编写博客 ## 配置hexo工作环境
-首先按照 hexo 官网上给定的教程下载依赖的一系列东西，然后选择一个文件夹
-在这个文件夹里 右键 git Bash here 如下图所示</label></li>
+<li><p><label><input type="checkbox"
+checked="" />根据hexo官网配置hexo工作环境</label></p></li>
+<li><p><label><input
+type="checkbox" />配置hexo的github托管仓库和token</label></p></li>
+<li><p><label><input
+type="checkbox" />设置图床和图床管理软件picGo</label></p></li>
+<li><p><label><input
+type="checkbox" />学习记录基本的hexo使用命令</label></p></li>
+<li><p><label><input type="checkbox" />下载next主题</label></p></li>
+<li><p><label><input type="checkbox" />配置hexo</label></p></li>
+<li><p><label><input type="checkbox" />配置next主题</label></p></li>
+<li><p><label><input type="checkbox" />编写博客</label></p>
+<h2 id="配置hexo工作环境">配置hexo工作环境</h2>
+<p>首先按照 hexo
+官网上给定的教程下载依赖的一系列东西，然后选择一个文件夹 在这个文件夹里
+右键 git Bash here 如下图所示</p></li>
 </ul>
 <figure>
 <img
@@ -97,6 +113,16 @@ href="https://hexo.io/zh-cn/docs/">hexo官网</a></p>
 <p>让第二步生成的页面在本地运行，可以用来预览 5. hexo d</p>
 <p>将第二步生成的静态网页部署到github仓库中 6. hexo n
 "要编写的md文件名"</p>
+<h1 id="配置hexo">配置hexo</h1>
+<h2 id="数学公式渲染">数学公式渲染</h2>
+<p>数学公式渲染首先需要下载pandoc，我遇到的状况是用npm下载无效，于是去pandoc官网下下载最新的.msi文件，直接点开安装，即可。</p>
+<p>然后在next主题配置文件的对应位置开启设置就可以了。</p>
+<h2 id="更改page-模板">更改page 模板</h2>
+<p>因为之前添加了分类标签，但是每次创建新的页面的时候头部描述里面只有tags，没有分类。添加的方法是更改模板。</p>
+<p>模板文件存放在scaffolds中。里边有三个模板 draft page 和post。</p>
+<p>用hexo n
+创建的默认是post，就是要发表出去的页面，就会调用post这个模板生成新的markdown文件。</p>
+<p>在里边添加上分类这一项就行了。</p>
 ]]></content>
       <categories>
         <category>记录类</category>
