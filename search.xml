@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>solidworks学习随笔</title>
-    <url>/2023/07/18/solidworks%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94/</url>
-    <content><![CDATA[<p>买了3d打印机当然要进行建模，选择的建模软件是之前大学的时候用过的solidworks。学习教程是B站的阿奇的教程，这里不记录具体的知识点，只记录学习过程，进度，和作业成果。</p>
-<p>2023 07 18</p>
-<p>看完了草图部分</p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>solidworks</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>mit电路与电子课程笔记</title>
     <url>/2023/07/12/mit%E7%94%B5%E8%B7%AF%E4%B8%8E%E7%94%B5%E5%AD%90%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="基本电路分析法">基本电路分析法</h1>
@@ -57,6 +43,87 @@ id="基尔霍夫电压定律和基尔霍夫电流定律">基尔霍夫电压定�
       </categories>
       <tags>
         <tag>电路</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>solidworks学习随笔</title>
+    <url>/2023/07/18/solidworks%E5%AD%A6%E4%B9%A0%E9%9A%8F%E7%AC%94/</url>
+    <content><![CDATA[<p>买了3d打印机当然要进行建模，选择的建模软件是之前大学的时候用过的solidworks。学习教程是B站的阿奇的教程，这里不记录具体的知识点，只记录学习过程，进度，和作业成果。</p>
+<p>2023 07 18</p>
+<p>看完了草图部分</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>solidworks</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>正点原子zynq pl端教程</title>
+    <url>/2023/08/14/%E6%AD%A3%E7%82%B9%E5%8E%9F%E5%AD%90zynq-pl%E7%AB%AF%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="视频4.3节ps-与pl端的数据交互">视频4.3节ps 与pl端的数据交互</h1>
+<h2 id="ps端图示">ps端图示</h2>
+<p><img
+src="https://cdn.staticaly.com/gh/yichenjiong/blog_images@main/images/202308141954222.png" /></p>
+<h2 id="ps-和外部交互接口">ps 和外部交互接口</h2>
+<p>从上图可以看出 ps端和外部的交互手段有：</p>
+<ul>
+<li><p>MIO</p></li>
+<li><p>EMIO</p></li>
+<li><p>XADC</p></li>
+<li><p>General-Purpose Ports</p></li>
+<li><p>DMA</p></li>
+<li><p>IRQ</p></li>
+<li><p>Config AES/SHA</p></li>
+<li><p>High-Performance Ports</p></li>
+<li><p>Accelerator Coherency Port (ACP) 用于访问 ps
+端的二级缓存和片上存储</p></li>
+</ul>
+<h2 id="ps-和-pl-的-axi-接口">ps 和 pl 的 axi 接口</h2>
+<p>这里所说的ps 和 pl 端的交互接口 axi 接口 指的是其中的</p>
+<ul>
+<li><p>General-Purpose Ports 通用目的端口</p></li>
+<li><p>High-Performance Ports 高性能端口</p></li>
+<li><p>ACP 译为加速一致性接口 个人感觉也可以译为 加速同调接口</p></li>
+</ul>
+<p>其中 GP(General-Purpose Ports) 接口 和 HP(High-Performance)
+接口示意图如下</p>
+<p><img
+src="https://cdn.staticaly.com/gh/yichenjiong/blog_images@main/images/202308142004190.png" /></p>
+<p>如图， GP 和 HP 接口 中的 M 和  S
+表示的是主机和从机的意思。这是相对于 ps 端的。M 表示 ps 端为主端 S 表示
+ps 端为从接口。</p>
+<p>接口列表如下</p>
+<p><img
+src="https://cdn.staticaly.com/gh/yichenjiong/blog_images@main/images/202308142008848.png" /></p>
+<h2 id="axi-接口简介">axi 接口简介</h2>
+<p>axi接口是 arm 公司的 amba(advanced microcontrol bus architecture)
+高级微控制总线结构 接口的一部分</p>
+<p>amba 接口包括</p>
+<ul>
+<li><p>APB</p></li>
+<li><p>AHB</p></li>
+<li><p>AXI advanced extensible interface 高级可扩展总线</p></li>
+<li><p>ATB</p></li>
+</ul>
+<p>其中 AXI 包含一下三种</p>
+<ul>
+<li><p>AXI4</p></li>
+<li><p>AXI4-Lite</p></li>
+<li><p>AXI4-Stream</p></li>
+</ul>
+<p>其中 AXI4 和 AXI4-Lite 接口是存储器映射接口 意思就是
+这俩接口在主从通信的时候是要指定数据存放地址的。</p>
+<p>AXI4 和 AXI4-Lite
+接口的区别是前者有突发模式而后者没有。突发模式的意思是，主机只指定起始地址，然后就可以发送很多个数据，从机在接受数据的时候自增地址，将数据存放在相应的位置。没有突发模式的话就得每个数据指定一个地址</p>
+<p>而AXI4-Stream 这个接口就不止存储器映射的。就传数据。</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>fpga</tag>
       </tags>
   </entry>
   <entry>
@@ -132,6 +199,128 @@ href="https://hexo.io/zh-cn/docs/">hexo官网</a></p>
       </tags>
   </entry>
   <entry>
+    <title>正点原子zynq硬件资源教程笔记</title>
+    <url>/2023/08/19/%E6%AD%A3%E7%82%B9%E5%8E%9F%E5%AD%90zynq%E7%A1%AC%E4%BB%B6%E8%B5%84%E6%BA%90%E6%95%99%E7%A8%8B%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="正点原子-zynq-硬件资源教程笔记">正点原子 zynq
+硬件资源教程笔记</h1>
+<h2 id="说明">说明</h2>
+<p>主要是看了文档中硬件资源的部分 ：</p>
+<ul>
+<li><p>ps pl 端的 io 分布</p></li>
+<li><p>上电顺序</p></li>
+<li><p>工程文件管理</p></li>
+</ul>
+<h2 id="io分布">io分布</h2>
+<p>因为我买的板子是 xc7z020 的，所以这里列举的是 zynq7020 的 io 分布</p>
+<p>xc7z020 有 6 个用户 io bank</p>
+<p><strong>pl 端bank 有 bank13 bank34 bank35</strong></p>
+<p>其中 bank34 的 PUDC_B 引脚的作用是上拉使能，低有效。</p>
+<p>官方的说法翻译过来是<strong>在上电之后配置期间低有效输入使能内部的
+SelectIO 上的上拉电阻</strong></p>
+<p>并且这个引脚必须被直接或者通过 1KΩ 或更小的电阻链接到 VCCO_34 或
+GND</p>
+<p>ps 端引脚包括了 3 个 bank</p>
+<p><strong>ps 端 bank 有 bank500 bank501 bank502</strong></p>
+<p>注： HR(high range) 指 电平标准比较大的引脚</p>
+<h2 id="启动模式">启动模式</h2>
+<p>zynq 支持 4 种启动模式</p>
+<ul>
+<li><p>JTAG</p></li>
+<li><p>NAND</p></li>
+<li><p>QSPI</p></li>
+<li><p>FLASH</p></li>
+<li><p>SD CARD</p></li>
+</ul>
+<p>这四种启动模式通过 MIO4 和 MIO5 两个引脚来控制，如下表</p>
+<table>
+<thead>
+<tr class="header">
+<th>BOOT_CFG</th>
+<th>MIO4</th>
+<th>MIO5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>JTAG</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>NAND</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>QSPI</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>SD CARD</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h2 id="上电顺序">上电顺序</h2>
+<p>zynq7020 对上电顺序和掉电顺序有要求</p>
+<p>这些在 xilinx 官方手册 DS187 上有详述。</p>
+<p>其中 ps 端 和 pl 端的上电没有顺序要求，但是 ps 自己的上电有顺序 pl
+自己的上电也是有顺序的。</p>
+<h3 id="ps-端上电顺序">ps 端上电顺序</h3>
+<p>ps 需要的电源有：</p>
+<ul>
+<li><p><span class="math inline">\(V_{CCPINT}\)</span></p></li>
+<li><p><span class="math inline">\(V_{CCPAUX}\)</span></p></li>
+<li><p><span class="math inline">\(V_{CCPLL}\)</span></p></li>
+<li><p><span class="math inline">\(V_{CCO}\)</span></p>
+<ul>
+<li><p><span class="math inline">\(V_{CCO\_MIO0}\)</span></p></li>
+<li><p><span class="math inline">\(V_{CCO\_MIO1}\)</span></p></li>
+<li><p><span class="math inline">\(V_{CCO\_DDR}\)</span></p></li>
+</ul></li>
+</ul>
+<p>推荐的上电顺序是：</p>
+<p><span class="math display">\[
+V_{CCPINT} -&gt; V_{CCPAUX} 和 V_{CCPLL} -&gt; V_{CCO}
+\]</span></p>
+<p>注： 在以上电平达到最小动作电位之前 PS_POR__B
+这个引脚必须是拉低状态</p>
+<h3 id="ps-端掉电顺序">ps 端掉电顺序</h3>
+<p>ps端的掉电顺序和上电顺序是反着来的</p>
+<p>如果vccpaux vccpll 和ps端的vcco
+需求的是相同的电平标准，那么可以使用相同的供电。</p>
+<p>xilinx推荐
+vccpll和vccpaux使用相同的可选的氧化铁滤波器(我感觉这玩意是淘宝上的空心磁珠铁氧体屏蔽磁环)</p>
+<p>掉电过程中，在vccpint
+掉到最小0.8v的时候，以下四个条件必须至少一个是有的：</p>
+<p>1、ps_por_b 已经拉低</p>
+<p>2、给ps_clk 的参考始终已经disabled了</p>
+<p>3、vccpaux的电压低于0.7v</p>
+<p>4、vcco_mio0低于0.9v</p>
+<p>这个条件必须在vccpint到达0.4v之前被保持住来确保efuse的完整性</p>
+<p>对于每一次上电和掉电过程
+vcco_mio0或vcco_mio1和vccpaux的压差必须小于2.625v并保持超过Tvcco2vccaux这个时间，来保证设备的可靠性等级</p>
+<h3 id="pl端上电顺序">pl端上电顺序</h3>
+<p>推 荐 的上 电 顺序为</p>
+<p>$$</p>
+<p>VCCINT-&gt;VCCBRAM-&gt;VCCAUX-&gt;VCCO</p>
+<p>$$</p>
+<p>如果 VCCINT 和 VCCBRAM 电平相同时，可以使用相同的电源。</p>
+<h3 id="上电顺序实现">上电顺序实现</h3>
+<p>原子的上电顺序控制是通过控制 EA3059 这个电源芯片的 EN
+引脚来控制上电顺序的</p>
+<p>具体电路图可以看原理图</p>
+]]></content>
+      <categories>
+        <category>笔记</category>
+      </categories>
+      <tags>
+        <tag>zynq</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>测试用文章</title>
     <url>/2023/07/04/%E6%B5%8B%E8%AF%95%E7%94%A8%E6%96%87%E7%AB%A0/</url>
     <content><![CDATA[<h1 id="blog-page-for-test">blog page for test</h1>
@@ -144,73 +333,6 @@ href="https://hexo.io/zh-cn/docs/">hexo官网</a></p>
       </categories>
       <tags>
         <tag>测试用文章</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>正点原子zynq pl端教程</title>
-    <url>/2023/08/14/%E6%AD%A3%E7%82%B9%E5%8E%9F%E5%AD%90zynq-pl%E7%AB%AF%E6%95%99%E7%A8%8B/</url>
-    <content><![CDATA[<h1 id="视频4.3节ps-与pl端的数据交互">视频4.3节ps 与pl端的数据交互</h1>
-<h2 id="ps端图示">ps端图示</h2>
-<p><img
-src="https://cdn.staticaly.com/gh/yichenjiong/blog_images@main/images/202308141954222.png" /></p>
-<h2 id="ps-和外部交互接口">ps 和外部交互接口</h2>
-<p>从上图可以看出 ps端和外部的交互手段有：</p>
-<ul>
-<li><p>MIO</p></li>
-<li><p>EMIO</p></li>
-<li><p>XADC</p></li>
-<li><p>General-Purpose Ports</p></li>
-<li><p>DMA</p></li>
-<li><p>IRQ</p></li>
-<li><p>Config AES/SHA</p></li>
-<li><p>High-Performance Ports</p></li>
-<li><p>Accelerator Coherency Port (ACP) 用于访问 ps
-端的二级缓存和片上存储</p></li>
-</ul>
-<h2 id="ps-和-pl-的-axi-接口">ps 和 pl 的 axi 接口</h2>
-<p>这里所说的ps 和 pl 端的交互接口 axi 接口 指的是其中的</p>
-<ul>
-<li><p>General-Purpose Ports 通用目的端口</p></li>
-<li><p>High-Performance Ports 高性能端口</p></li>
-<li><p>ACP 译为加速一致性接口 个人感觉也可以译为 加速同调接口</p></li>
-</ul>
-<p>其中 GP(General-Purpose Ports) 接口 和 HP(High-Performance)
-接口示意图如下</p>
-<p><img
-src="https://cdn.staticaly.com/gh/yichenjiong/blog_images@main/images/202308142004190.png" /></p>
-<p>如图， GP 和 HP 接口 中的 M 和  S
-表示的是主机和从机的意思。这是相对于 ps 端的。M 表示 ps 端为主端 S 表示
-ps 端为从接口。</p>
-<p>接口列表如下</p>
-<p><img
-src="https://cdn.staticaly.com/gh/yichenjiong/blog_images@main/images/202308142008848.png" /></p>
-<h2 id="axi-接口简介">axi 接口简介</h2>
-<p>axi接口是 arm 公司的 amba(advanced microcontrol bus architecture)
-高级微控制总线结构 接口的一部分</p>
-<p>amba 接口包括</p>
-<ul>
-<li><p>APB</p></li>
-<li><p>AHB</p></li>
-<li><p>AXI advanced extensible interface 高级可扩展总线</p></li>
-<li><p>ATB</p></li>
-</ul>
-<p>其中 AXI 包含一下三种</p>
-<ul>
-<li><p>AXI4</p></li>
-<li><p>AXI4-Lite</p></li>
-<li><p>AXI4-Stream</p></li>
-</ul>
-<p>其中 AXI4 和 AXI4-Lite 接口是存储器映射接口 意思就是
-这俩接口在主从通信的时候是要指定数据存放地址的。</p>
-<p>AXI4 和 AXI4-Lite
-接口的区别是前者有突发模式而后者没有。突发模式的意思是，主机只指定起始地址，然后就可以发送很多个数据，从机在接受数据的时候自增地址，将数据存放在相应的位置。没有突发模式的话就得每个数据指定一个地址</p>
-<p>而AXI4-Stream 这个接口就不止存储器映射的。就传数据。</p>
-]]></content>
-      <categories>
-        <category>笔记</category>
-      </categories>
-      <tags>
-        <tag>fpga</tag>
       </tags>
   </entry>
 </search>
